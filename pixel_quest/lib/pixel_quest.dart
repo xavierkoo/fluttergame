@@ -13,7 +13,7 @@ class PixelQuest extends FlameGame {
       cam; // late means that the variable will be initialized later
 
   @override
-  final world = MainLevel();
+  final world = MainLevel(levelName: 'main_world_0-2');
 
   @override
   FutureOr<void> onLoad() async {

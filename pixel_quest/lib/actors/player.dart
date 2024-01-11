@@ -18,7 +18,12 @@ enum PlayerState {
 // is that sprite animation group component can have multiple animations
 // and can switch between them while sprite component can only have one animation
 class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelQuest> {
+  String character;
+  Player({position, required this.character}) : super(position: position); // constructor that takes in a character name, super position means that the position is passed to the parent class
+
   late final SpriteAnimation idleAnimation;
+  late final SpriteAnimation runningAnimation;
+
   final double stepTime = 0.05; // how long each frame of the animation lasts
 
   @override
@@ -28,20 +33,26 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelQuest> {
   }
 
   void _loadAllAnimations() {
-    idleAnimation = SpriteAnimation.fromFrameData(
-      game.images.fromCache('MainCharacters/PinkMan/Idle (32x32).png'),
-      SpriteAnimationData.sequenced(
-          amount: 11, // how many frames are in the animation (from image file)
-          stepTime: stepTime, 
-          textureSize: Vector2.all(32) // size of each frame in the animation
-      )
-    );
+    idleAnimation = _spriteAnimation('Idle', 11);
+    runningAnimation = _spriteAnimation('Run', 12);
 
     // list of all animations that the player can have so that we can switch between them
     animations = {
       PlayerState.idle: idleAnimation,
+      PlayerState.running: runningAnimation,
     };
 
-    current = PlayerState.idle; // set the current animation to idle
+    current = PlayerState.idle; 
+  }
+
+  SpriteAnimation _spriteAnimation(String state, int amount) {
+    return SpriteAnimation.fromFrameData(
+      game.images.fromCache('MainCharacters/$character/$state (32x32).png'),
+      SpriteAnimationData.sequenced(
+          amount: amount, // how many frames are in the animation (from image file)
+          stepTime: stepTime, 
+          textureSize: Vector2.all(32) // size of each frame in the animation
+      )
+    );  
   }
 }
