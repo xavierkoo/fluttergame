@@ -3,8 +3,9 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "main_world_0-1.tmx",
     "expandedProjectPaths": [
+        "."
     ],
     "fileStates": {
         "main_world_0-1.tmx": {
@@ -14,8 +15,8 @@
             "scale": 1.483,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 620.3641267700607,
-                "y": 190.82939986513824
+                "x": 8.091706001348616,
+                "y": 67.09372892784894
             }
         },
         "main_world_0-2.tmx": {
@@ -25,9 +26,13 @@
             "scale": 1.4621093749999998,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 601.186214266631,
-                "y": 194.92385786802035
+                "x": 600.5022709056907,
+                "y": 194.23991450707987
             }
+        },
+        "pixel_quest_main_world.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         }
     },
     "last.imagePath": "/Users/XavierKoo/Desktop/poo-pan/Road-to-SWE/Projects/fluttergame/pixel_quest/assets/images/Terrain",
@@ -37,9 +42,15 @@
     "map.tileWidth": 16,
     "map.width": 40,
     "openFiles": [
+        "pixel_quest_main_world.tsx",
+        "main_world_0-1.tmx",
+        "main_world_0-2.tmx"
     ],
     "project": "pixel_quest.tiled-project",
     "recentFiles": [
+        "pixel_quest_main_world.tsx",
+        "main_world_0-2.tmx",
+        "main_world_0-1.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

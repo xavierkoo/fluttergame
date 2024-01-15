@@ -1,11 +1,14 @@
 import 'dart:async';
 import 'package:flame/components.dart';
 import 'package:flame_tiled/flame_tiled.dart';
-import 'package:pixel_quest/actors/player.dart';
+import 'package:pixel_quest/components/actors/player.dart';
 
 class MainLevel extends World {
   final String levelName;
-  MainLevel({required this.levelName}); // constructor that takes in a level name
+  final Player player;
+  MainLevel(
+      {required this.levelName,
+      required this.player}); // constructor that takes in a level name and a player
   late TiledComponent
       level; // late means that the variable will be initialized later
 
@@ -23,11 +26,9 @@ class MainLevel extends World {
       // loop through all the spawn points
       switch (spawnPoint.type) {
         // check the type of the spawn point
-        case 'Player': // if the spawn point is a player spawn point
-          final player = Player(
-              character: 'PinkMan',
-              position:
-                  Vector2(spawnPoint.x, spawnPoint.y)); // create a new player
+        case 'Player':
+          player.position = Vector2(spawnPoint.x,
+              spawnPoint.y); // set the player position to the spawn point
           add(player); // add the player to the world
           break;
         default:
