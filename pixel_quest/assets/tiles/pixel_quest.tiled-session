@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "main_world_0-1.tmx",
+    "activeFile": "main_world_0-2.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -15,19 +15,19 @@
             "scale": 1.483,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 8.091706001348616,
-                "y": 67.09372892784894
+                "x": 319.6223870532704,
+                "y": 183.41200269723532
             }
         },
         "main_world_0-2.tmx": {
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 1.4621093749999998,
-            "selectedLayer": 1,
+            "scale": 2,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 600.5022709056907,
-                "y": 194.23991450707987
+                "x": -37.5,
+                "y": 63.5
             }
         },
         "pixel_quest_main_world.tsx": {
@@ -49,8 +49,8 @@
     "project": "pixel_quest.tiled-project",
     "recentFiles": [
         "pixel_quest_main_world.tsx",
-        "main_world_0-2.tmx",
-        "main_world_0-1.tmx"
+        "main_world_0-1.tmx",
+        "main_world_0-2.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

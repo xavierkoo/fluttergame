@@ -74,15 +74,15 @@ class PixelQuest extends FlameGame
       case JoystickDirection.left:
       case JoystickDirection.upLeft:
       case JoystickDirection.downLeft:
-        // player.playerDirection = PlayerDirection.left;
+        player.horizontalMovement = -1; // move the player left
         break;
       case JoystickDirection.right:
       case JoystickDirection.upRight:
       case JoystickDirection.downRight:
-        // player.playerDirection = PlayerDirection.right;
+        player.horizontalMovement = 1; // move the player right
         break;
       default:
-        // player.playerDirection = PlayerDirection.none;
+        player.horizontalMovement = 0; // don't move the player
         break;
     }
   }
