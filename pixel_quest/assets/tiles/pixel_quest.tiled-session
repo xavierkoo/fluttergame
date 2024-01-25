@@ -24,10 +24,10 @@
                 2
             ],
             "scale": 2,
-            "selectedLayer": 2,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": -37.5,
-                "y": 63.5
+                "x": -230.5,
+                "y": 47.5
             }
         },
         "pixel_quest_main_world.tsx": {

@@ -169,70 +169,54 @@ class Player extends SpriteAnimationGroupComponent
     position.y += velocity.y * dt; // move the player by the velocity
   }
 
-  // TODO: fix collision detection with smaller player hitbox
   void _checkHorizontalCollisions() {
     final playerBounds = toRect(); // get the player bounds as a rectangle
 
-    // reduce width and height of the player bounds
-    final adjustedPlayerBounds = Rect.fromLTWH(
-        playerBounds.left,
-        playerBounds.top,
-        playerBounds.width - 6,
-        playerBounds.height);
-
     for (final block in collisionBlocks) {
-      if (adjustedPlayerBounds.overlaps(block.toRect())) {
+      if (playerBounds.overlaps(block.toRect())) {
         // check if the player is colliding with the block
         if (horizontalMovement < 0) {
           // if the player is moving left
           position.x = block.toRect().right +
-              adjustedPlayerBounds
+              playerBounds
                   .width; // set the player position to the right side of the block
         } else if (horizontalMovement > 0) {
           // if the player is moving right
           position.x = block.toRect().left -
-              adjustedPlayerBounds
+              playerBounds
                   .width; // set the player position to the left side of the block
         }
       }
     }
   }
 
-  // TODO: fix collision detection with smaller player hitbox
   void _checkVerticalCollisions() {
     final playerBounds = toRect(); // get the player bounds as a rectangle
 
-    // reduce width and height of the player bounds
-    final adjustedPlayerBounds = Rect.fromLTWH(
-        playerBounds.left,
-        playerBounds.top,
-        playerBounds.width - 6,
-        playerBounds.height);
-
     for (final block in collisionBlocks) {
       if (!block.isPlatform) {
-        if (adjustedPlayerBounds.overlaps(block.toRect())) {
+        if (playerBounds.overlaps(block.toRect())) {
           // check if the player is colliding with the block
           if (velocity.y > 0) {
             // if the player is moving down
             position.y = block.toRect().top -
-                adjustedPlayerBounds
+                playerBounds
                     .height; // set the player position to the top of the block
             isOnGround = true;
           } else if (velocity.y < 0) {
             // if the player is moving up
             position.y = block.toRect().bottom +
-                adjustedPlayerBounds
+                playerBounds
                     .height; // set the player position to the bottom of the block
           }
         }
       } else {
-        if (adjustedPlayerBounds.overlaps(block.toRect())) {
+        if (playerBounds.overlaps(block.toRect())) {
           // allow the player to jump through platforms only if they are moving down
           if (velocity.y > 0) {
             // if the player is moving down
             position.y = block.toRect().top -
-                adjustedPlayerBounds
+                playerBounds
                     .height; // set the player position to the top of the block
             isOnGround = true;
           }
