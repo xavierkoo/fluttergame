@@ -36,7 +36,7 @@ class Player extends SpriteAnimationGroupComponent
   final double stepTime = 0.05; // how long each frame of the animation lasts
 
   final double _gravity = 15;
-  final double _jumpForce = 320;
+  final double _jumpForce = 330;
   final double _terminalVelocity = 300;
   double horizontalMovement =
       0; // 0 means not moving, -1 means moving left, 1 means moving right

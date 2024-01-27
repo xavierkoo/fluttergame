@@ -1,25 +1,22 @@
 import 'dart:async';
-import 'dart:ui';
-
 import 'package:flame/components.dart';
 import 'package:flame/events.dart';
 import 'package:flame/game.dart';
 import 'package:flame/input.dart';
+import 'package:flame/parallax.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pixel_quest/components/levels/main_level.dart';
 import 'package:pixel_quest/components/actors/player.dart';
-import 'package:pixel_quest/constants/colors.dart';
 
 class PixelQuest extends FlameGame
     with HasKeyboardHandlerComponents, DragCallbacks {
   // has keyboard handler components allows the game to handle keyboard input
-  @override
-  Color backgroundColor() => const Color(ColorConstants.mainWorldSky);
   late final CameraComponent
       cam; // late means that the variable will be initialized later
   Player player = Player(character: 'VirtualGuy');
   late JoystickComponent joystick;
-  bool showJoystick = false; // to toggle the joystick on and off for mobile vs desktop
+  bool showJoystick =
+      false; // to toggle the joystick on and off for mobile vs desktop
 
   @override
   FutureOr<void> onLoad() async {
@@ -28,6 +25,20 @@ class PixelQuest extends FlameGame
     await images.loadAllImages();
 
     final world = MainLevel(levelName: 'main_world_0-2', player: player);
+
+    // load the parallax background
+    final parallaxBackground = await loadParallaxComponent([
+      ParallaxImageData('Background/Clouds/Clouds1/1.png'),
+      ParallaxImageData('Background/Clouds/Clouds1/2.png'),
+      ParallaxImageData('Background/Clouds/Clouds1/4.png'),
+    ],
+        baseVelocity: Vector2(
+            2, 0), // base velocity is the velocity that the background moves at
+        velocityMultiplierDelta: Vector2(1.6,
+            1.0), // velocity multiplier delta is how much the velocity changes by each time the player moves
+        fill: LayerFill.width,
+        alignment: Alignment.center);
+    add(parallaxBackground);
 
     cam = CameraComponent.withFixedResolution(
         world: world,
@@ -67,7 +78,7 @@ class PixelQuest extends FlameGame
 
     add(joystick);
   }
-  
+
   // joystick callbacks to update the player direction based on the joystick direction
   void updateJoystick() {
     switch (joystick.direction) {

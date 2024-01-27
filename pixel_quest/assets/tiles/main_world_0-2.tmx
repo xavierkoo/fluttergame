@@ -39,7 +39,7 @@
   <object id="15" x="260" y="128" width="40" height="48"/>
   <object id="16" x="256" y="176" width="44" height="96"/>
   <object id="19" x="356" y="224" width="8" height="48"/>
-  <object id="20" type="Platform" x="336" y="224" width="48" height="4"/>
+  <object id="20" type="Platform" x="340" y="224" width="40" height="4"/>
   <object id="22" x="432" y="352" width="48" height="12"/>
  </objectgroup>
  <objectgroup id="2" name="SpawnPoints">
