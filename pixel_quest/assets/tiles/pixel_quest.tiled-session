@@ -15,8 +15,8 @@
             "scale": 1.483,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 319.6223870532704,
-                "y": 183.41200269723532
+                "x": 320.2966958867161,
+                "y": 183.7491571139582
             }
         },
         "main_world_0-2.tmx": {
@@ -24,10 +24,10 @@
                 2
             ],
             "scale": 2,
-            "selectedLayer": 1,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 399.75,
-                "y": 193.5
+                "x": 250.5,
+                "y": 164.25
             }
         },
         "pixel_quest_main_world.tsx": {
@@ -48,8 +48,8 @@
     ],
     "project": "pixel_quest.tiled-project",
     "recentFiles": [
-        "pixel_quest_main_world.tsx",
         "main_world_0-1.tmx",
+        "pixel_quest_main_world.tsx",
         "main_world_0-2.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",

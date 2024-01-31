@@ -24,8 +24,10 @@ class PixelQuest extends FlameGame
     // loaded it will slow down the start of the game so modify this to only load the images you need later
     await images.loadAllImages();
 
+    // TODO: abstract this into a level manager class to allow for multiple levels
     final world = MainLevel(levelName: 'main_world_0-2', player: player);
 
+    // TODO: abstract this into a parallax manager class to allow for multiple parallax backgrounds depending on the level
     // load the parallax background
     final parallaxBackground = await loadParallaxComponent([
       ParallaxImageData('Background/Clouds/Clouds1/1.png'),

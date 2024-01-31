@@ -3,6 +3,7 @@ import 'package:flame/components.dart';
 import 'package:flame_tiled/flame_tiled.dart';
 import 'package:pixel_quest/components/actors/player.dart';
 import 'package:pixel_quest/components/environment_objects/collision_block.dart';
+import 'package:pixel_quest/components/environment_objects/item.dart';
 
 class MainLevel extends World {
   final String levelName;
@@ -34,6 +35,12 @@ class MainLevel extends World {
               spawnPoint.y); // set the player position to the spawn point
           add(player); // add the player to the world
           break;
+        case 'Item':
+          final item = Item(
+              itemName: spawnPoint.name,
+              position: Vector2(spawnPoint.x, spawnPoint.y),
+              size: Vector2(spawnPoint.width, spawnPoint.height));
+          add(item); // add the item to the world
         default:
       }
     }

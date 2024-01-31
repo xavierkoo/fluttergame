@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="24">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="27">
  <tileset firstgid="1" source="pixel_quest_main_world.tsx"/>
  <layer id="1" name="Background" width="40" height="23">
   <data encoding="csv">
@@ -44,5 +44,7 @@
  </objectgroup>
  <objectgroup id="2" name="SpawnPoints">
   <object id="1" name="Player" type="Player" x="80" y="236" width="32" height="32"/>
+  <object id="24" name="SpeedUp" type="Item" x="264" y="96" width="32" height="32"/>
+  <object id="26" name="JumpHigher" type="Item" x="344" y="192" width="32" height="32"/>
  </objectgroup>
 </map>
