@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="27">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="29">
  <tileset firstgid="1" source="pixel_quest_main_world.tsx"/>
  <layer id="1" name="Background" width="40" height="23">
   <data encoding="csv">
@@ -41,6 +41,8 @@
   <object id="19" x="356" y="224" width="8" height="48"/>
   <object id="20" type="Platform" x="340" y="224" width="40" height="4"/>
   <object id="22" x="432" y="352" width="48" height="12"/>
+  <object id="27" type="Item" x="272" y="96" width="16" height="32"/>
+  <object id="28" type="Item" x="352" y="192" width="16" height="32"/>
  </objectgroup>
  <objectgroup id="2" name="SpawnPoints">
   <object id="1" name="Player" type="Player" x="80" y="236" width="32" height="32"/>

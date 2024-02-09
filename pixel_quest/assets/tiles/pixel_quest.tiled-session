@@ -24,10 +24,10 @@
                 2
             ],
             "scale": 2,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 250.5,
-                "y": 164.25
+                "x": 197.25,
+                "y": 157.25
             }
         },
         "pixel_quest_main_world.tsx": {
@@ -43,14 +43,13 @@
     "map.width": 40,
     "openFiles": [
         "pixel_quest_main_world.tsx",
-        "main_world_0-1.tmx",
         "main_world_0-2.tmx"
     ],
     "project": "pixel_quest.tiled-project",
     "recentFiles": [
-        "main_world_0-1.tmx",
         "pixel_quest_main_world.tsx",
-        "main_world_0-2.tmx"
+        "main_world_0-2.tmx",
+        "main_world_0-1.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

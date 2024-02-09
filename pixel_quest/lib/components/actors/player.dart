@@ -169,6 +169,7 @@ class Player extends SpriteAnimationGroupComponent
     position.y += velocity.y * dt; // move the player by the velocity
   }
 
+  // TODO: add collision with items which is different from collision with blocks
   void _checkHorizontalCollisions() {
     final playerBounds = toRect(); // get the player bounds as a rectangle
 
@@ -190,6 +191,7 @@ class Player extends SpriteAnimationGroupComponent
     }
   }
 
+  // TODO: add collision with items which is different from collision with blocks
   void _checkVerticalCollisions() {
     final playerBounds = toRect(); // get the player bounds as a rectangle
 

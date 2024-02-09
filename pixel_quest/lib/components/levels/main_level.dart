@@ -57,15 +57,26 @@ class MainLevel extends World {
                 position: Vector2(collision.x, collision.y),
                 size: Vector2(collision.width, collision.height),
                 isPlatform: true,
+                isItem: false,
             );
             collisionBlocks.add(platform); // add the collision block to the list of collision blocks
             add(platform); // add the collision block to the world
+            break;
+          case 'Item':
+            final item = CollisionBlock(
+                position: Vector2(collision.x, collision.y),
+                size: Vector2(collision.width, collision.height),
+                isPlatform: false,
+                isItem: true,
+            );
+            add(item); // add the item to the world
             break;
           default:
             final block = CollisionBlock(
                 position: Vector2(collision.x, collision.y),
                 size: Vector2(collision.width, collision.height),
                 isPlatform: false,
+                isItem: false,
             );
             collisionBlocks.add(block); // add the collision block to the list of collision blocks
             add(block); // add the collision block to the world

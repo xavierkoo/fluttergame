@@ -13,8 +13,12 @@ class Item extends SpriteAnimationComponent with HasGameRef<PixelQuest> {
 
   final double stepTime = 0.05; // how long each frame of the animation lasts
 
+  
+
   @override
   FutureOr<void> onLoad() {
+    debugMode = true;
+    priority = -1; // set the priority to -1 so that the item is drawn behind the player
     animation = SpriteAnimation.fromFrameData(
       game.images.fromCache('Items/Fruits/$itemName.png'),
       SpriteAnimationData.sequenced(
